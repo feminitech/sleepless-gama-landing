@@ -34,7 +34,7 @@ gem 'jquery-rails'
 
 gem 'bootstrap-sass', '~> 3.3.6'
   
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
