@@ -26,28 +26,28 @@
                     <div class="col-sm-8">
 
                       <!-- Form -->
-                      <form class="contact__container__form" id="form_sendemail">
+                      <%= form_for :contact_us, url: '/contact', html: {class: 'contact__container__form'} do |f| %>
 
                         <!-- Name -->
                         <div class="form-group">
-                          <label for="name" class="sr-only">Name *</label>
-                          <input name="name" class="form-control" id="name" placeholder="Insira seu Nome" type="text">
+                          <label for="name" class="sr-only">Nome *</label>
+                          <%= f.text_field :name, class: 'form-control', placeholder: "Insira seu Nome" %>
                           <span class="help-block"></span>
                         </div>
 
                         <!-- Email -->
                         <div class="form-grou-nl">
-                          <label for="email" class="sr-only">Email address *</label>
-                          <input name="email" class="form-control" id="email" placeholder="Insira seu Email" type="email">
+                          <label for="email" class="sr-only">Email *</label>
+                          <%= f.email_field :email, class: 'form-control', placeholder: "Insira seu Email" %>
                           <span class="help-block"></span>
                         </div>
 
                         <!-- Submit -->
                         <button type="submit" class="btn btn-primary">
-                          Baixe seu Ebook!
+                          Ver resultado
                         </button>
 
-                      </form>
+                      <% end %>
 
                     </div>
                   </div> <!-- / .row -->
@@ -84,28 +84,28 @@
                     <div class="col-sm-8">
 
                       <!-- Form -->
-                      <form class="contact__container__form" id="form_sendemail">
+                      <%= form_for :contact_us, url: '/contact', html: {class: 'contact__container__form'} do |f| %>
 
                         <!-- Name -->
                         <div class="form-group">
-                          <label for="name" class="sr-only">Name *</label>
-                          <input name="name" class="form-control" id="name" placeholder="Insira seu Nome" type="text">
+                          <label for="name" class="sr-only">Nome *</label>
+                          <%= f.text_field :name, class: 'form-control', placeholder: "Insira seu Nome" %>
                           <span class="help-block"></span>
                         </div>
 
                         <!-- Email -->
                         <div class="form-grou-nl">
-                          <label for="email" class="sr-only">Email address *</label>
-                          <input name="email" class="form-control" id="email" placeholder="Insira seu Email" type="email">
+                          <label for="email" class="sr-only">Email *</label>
+                          <%= f.email_field :email, class: 'form-control', placeholder: "Insira seu Email" %>
                           <span class="help-block"></span>
                         </div>
 
                         <!-- Submit -->
                         <button type="submit" class="btn btn-primary">
-                          Baixe seu Ebook!
+                          Ver resultado
                         </button>
 
-                      </form>
+                      <% end %>
 
                     </div>
                   </div> <!-- / .row -->
@@ -160,7 +160,8 @@
 
       <!-- Images -->
       <div class="banner__carousel__img" data-images="assets/mulher.png, assets/img/2.jpg, assets/img/homem.png" style="position: absolute; z-index: 0; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">
-      <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 638px; width: 1353px; z-index: -999998; position: absolute;"><img style="position: absolute; margin: 0px; padding: 0px; border: medium none; width: 1353px; height: 902px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -132px;" src="assets/2.jpg"></div></div>
+      <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 855px; width: 1263px; z-index: -999998; position: absolute;"><img src="Transforme%20a%20Carreira_arquivos/homem.png" style="position: absolute; margin: 0px; padding: 0px; border: medium none; width: 1465.71px; height: 855px; max-height: none; max-width: none; z-index: -999999; left: -101.357px; top: 0px;"></div></div>
+
 
       <!-- Carousel -->
       <div id="banner__carousel" class="banner__carousel carousel" data-ride="carousel">
@@ -177,36 +178,12 @@
                     <span>Guia definitivo</span> para quem quer trabalhar em startups
                   </h1>
                   <p class="page-subheader text-white-muted text-center animate-down animate-xs-step-1">
-                    Faça download grátis do nosso ebook e dê seus primeiros passos no mundo das  startups!
+                    Faça download grátis do nosso ebook e dê seus primeiros passos no mundo das  startups :)
                   </p>
                   <div class="text-center">
-                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Nosso super Ebook!" data-img="assets/" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
-                      Descubra-se aqui!
+                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Baixe nosso Ebook!" data-img="assets/" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
+                    Baixe aqui
                     </a>
-                  </div>
-
-                </div>
-              </div> <!-- / .row -->
-            </div> <!-- / .container -->
-
-          </div>
-          <div class="item active">
-
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12">
-
-                  <h1 class="h0 page-header text-white text-center animate-down animate-xs-step-0">
-                    Bem vindo <span>À Transformação</span>
-                  </h1>
-                  <p class="page-subheader text-white-muted text-center animate-down animate-xs-step-1">
-                    Conheça nosso blog e saiba como você pode otimizar suas habilidades para se tornar o profissional que o mercado procura!
-                  </p>
-                  <div class="text-center">
-                    <a href="#section_features" class="btn btn-primary animate-down animate-xs-step-2">
-                      Descubra-se aqui!
-                    </a>
-
                   </div>
 
                 </div>
@@ -221,14 +198,39 @@
                 <div class="col-xs-12">
 
                   <h1 class="h0 page-header text-white text-center animate-down animate-xs-step-0">
+                    Bem vindo <span>À Transformação</span>
+                  </h1>
+                  <p class="page-subheader text-white-muted text-center animate-down animate-xs-step-1">
+                    Conheça nosso blog e saiba como você pode otimizar
+suas habilidades para se tornar o profissional que o mercado procura!
+                  </p>
+                  <div class="text-center">
+                    <a href="#section_features" class="btn btn-primary animate-down animate-xs-step-2">
+                      Descubra-se aqui!
+                    </a>
+
+                  </div>
+
+                </div>
+              </div> <!-- / .row -->
+            </div> <!-- / .container -->
+
+          </div>
+          <div class="item active">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+
+                  <h1 class="h0 page-header text-white text-center animate-down animate-xs-step-0">
                     Faça nosso <span>quiz</span> agora mesmo
                   </h1>
                   <p class="page-subheader text-white-muted text-center animate-down animate-xs-step-1">
-                    Quiz combinado com perguntas estratégicas que irão te mostrar a área em que mais se encaixa.
+                    Quiz combinado com perguntas estratégicas que irão te mostrar a área em que mais se encaixa ;)
                   </p>
                   <div class="text-center">
-                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Nosso super Quiz!" data-img="assets/" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
-                      Baixe Agora!
+                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Quem é você em Game of Thrones?" data-img="assets/" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
+                      Descubra-se aqui
                     </a>
                   </div>
 
@@ -242,8 +244,8 @@
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#banner__carousel" data-slide-to="0" class=""></li>
-          <li data-target="#banner__carousel" data-slide-to="1" class="active"></li>
-          <li data-target="#banner__carousel" data-slide-to="2" class=""></li>
+          <li data-target="#banner__carousel" data-slide-to="1" class=""></li>
+          <li data-target="#banner__carousel" data-slide-to="2" class="active"></li>
         </ol>
 
         <!-- Controls -->
@@ -272,7 +274,10 @@
             </h2>
 
             <p class="page-subheader text-center">
-              As exigências do mercado de trabalho e você precisa acompanhar o ritmo para não ficar para trás. Nosso objetivo é te guiar na direção correta, com tudo o que precisa saber para se tornar um profissional de alta performance para atuar nas áreas de design, marketing, programação e vendas.
+              Você precisa acompanhar as exigências do mercado de trabalho para não ficar para trás. Nosso objetivo é te guiar
+na direção correta, com tudo o que precisa saber para se tornar um
+profissional de alta performance para atuar nas áreas de design,
+marketing, programação e vendas.
             </p>
 
           </div>
@@ -288,7 +293,10 @@
                 Transforme
               </h3>
               <div class="features__item__body">
-                Está entrando no mercado de trabalho ou quer se tornar um profissional mais eficiente? Descubra mais sobre seu perfil profissional, conheça suas melhores habilidades e faça delas sua mais importante ferramenta de trabalho.
+                Está entrando no mercado de trabalho ou quer se tornar
+um profissional mais eficiente? Descubra mais sobre seu perfil
+profissional, conheça suas melhores habilidades e faça delas sua mais
+importante ferramenta de trabalho.
               </div>
             </div>
 
@@ -303,7 +311,10 @@
                 Inove
               </h3>
               <div class="features__item__body">
-                O conhecimento vai muito além de livros e teorias sobre o mercado digital. Leia, estude, mas lembre-se também de vivenciar experiências que farão de você “o cara” que as melhores startups do Brasil e do mundo precisam.
+                O conhecimento vai muito além de livros e teorias sobre o
+ mercado digital. Leia, estude, mas lembre-se também de vivenciar
+experiências que farão de você “o cara” que as melhores startups do
+Brasil e do mundo precisam.
               </div>
             </div>
 
@@ -318,7 +329,9 @@
                 Empreenda
               </h3>
               <div class="features__item__body">
-                As startups mudaram o sentido da palavra empreender. Mais criatividade e menos dinheiro são o mais comum no cenário do empreendedorismo. Você precisa ficar por dentro desse novo mundo.
+                As startups mudaram o sentido da palavra empreender.
+Mais criatividade e menos dinheiro são o mais comum no cenário do
+empreendedorismo. 1500 empresas brasileiras são startups, só em São Paulo, só no último ano, o setor movimentou em torno de 10 bilhões de reais. Você precisa ficar por dentro desse novo mundo!
               </div>
             </div>
 
@@ -339,7 +352,13 @@
             </h2>
 
             <p class="page-subheader text-center">
-              Apesar de o nome startup poder ser literalmente traduzido como algo que acaba de começar, nem toda nova empresa pode ser chamada assim. Isso porque o termo startup já ganhou uma definição mais atual. Segundo Yuri Gitahy, especialista em startups e fundador da conselheiro de empresas de tecnologia e fundador da Aceleradora, afirma que “uma startup é um grupo de pessoas à procura de um modelo de negócios repetível e escalável, trabalhando em condições de extrema incerteza”.
+              Apesar de o nome startup poder ser literalmente traduzido
+como algo que acaba de começar, nem toda nova empresa pode ser chamada
+assim. Isso porque o termo startup já ganhou uma definição mais atual.
+Segundo Yuri Gitahy, especialista em startups e fundador da conselheiro
+de empresas de tecnologia e fundador da Aceleradora, afirma que “uma
+startup é um grupo de pessoas à procura de um modelo de negócios
+repetível e escalável, trabalhando em condições de extrema incerteza”.
             </p>
 
           </div>
@@ -439,10 +458,11 @@
         </div>
       </div>
 
-          
+
         </div> <!-- / .row -->
       </div> <!-- / .container -->
     </section>
+    
 
     <!-- STATS
     ================================================== -->
@@ -456,7 +476,9 @@
             </h2>
 
             <p class="page-subheader  text-center">
-              Fique ligado no que há de mais atual sobre carreira, startups, capacitação e principais eventos da área pelo Brasil e no mundo.
+              Fique ligado no que há de mais atual sobre carreira,
+startups, capacitação e principais eventos da área pelo Brasil e no
+mundo.
             </p>
 
           </div>
@@ -491,7 +513,6 @@
                     </button>
 
                   <% end %>
-
                 </div>
               </div> <!-- / .row -->
             </div>
@@ -513,7 +534,9 @@
             </h2>
 
             <p class="page-subheader text-center">
-              Há vagas, muitas vagas nas startups, mas os pré-requisitos não são bem uma graduação convencional. Conheça as áreas que funcionam como pilares nessas empresas:
+              Há vagas, muitas vagas nas startups, mas os pré-requisitos
+ não são bem uma graduação convencional. Conheça as áreas que funcionam
+como pilares nessas empresas:
             </p>
 
           </div>
@@ -528,7 +551,11 @@
                 </div>
               </div> <!-- / progress -->
               <p>
-                Você manja de códigos, criar sites, resolver bugs? As pessoas sempre lembram de você quando precisam formatar o computador? Então, você pode atuar como Hacker, aproveitando suas habilidades de Desenvolvimento Ágil, Scrum e diversas outras metodologias e ferramentas.
+                Você manja de códigos, criar sites, resolver bugs? As
+pessoas sempre lembram de você quando precisam formatar o computador?
+Então, você pode atuar como Hacker, aproveitando suas habilidades de
+Desenvolvimento Ágil, Scrum e diversas outras metodologias e
+ferramentas.
               </p>
             </div> <!-- / .skills__item -->
 
@@ -539,7 +566,10 @@
                 </div>
               </div> <!-- / .progress -->
               <p>
-                Briefing, Branding, Design de Interação, Design Thinking, fazem parte do seu vocabulário? Já te disseram: “Meu sobrinho também faz isso pela metade do preço”? Se sim, você pode ser um Hipster em uma startup bem cool.
+                Briefing, Branding, Design de Interação, Design
+Thinking, fazem parte do seu vocabulário? Já te disseram: “Meu sobrinho
+também faz isso pela metade do preço”? Se sim, você pode ser um Hipster
+em uma startup bem cool.
               </p>
             </div> <!-- / .skills__item -->
 
@@ -550,7 +580,10 @@
                 </div>
               </div> <!-- / .progress -->
               <p>
-                Instagram não é só um lugar para postar selfie, mas sua ferramenta de trabalho? Curte fazer testes, testes e mais um pouco de testes? Batalha a ferro e fogo para estar nos primeiros lugares do Google? Seu lugar é como Hyper!
+                Instagram não é só um lugar para postar selfie, mas sua
+ferramenta de trabalho? Curte fazer testes, testes e mais um pouco de
+testes? Batalha a ferro e fogo para estar nos primeiros lugares do
+Google? Seu lugar é como Hyper!
               </p>
             </div> <!-- / .skills__item -->
 
@@ -561,7 +594,11 @@
                 </div>
               </div> <!-- / .progress -->
               <p>
-                Seu forte é a argumentação e não perde vendas jamais? Você consegue fazer parcerias, entender o problema do seu cliente e resolver em tempo Usain Bolt? Que tal ser um Hustler e desenvolver suas habilidades com Customer Success, Inside Sales, Spin Selling e muito mais?
+                Seu forte é a argumentação e não perde vendas jamais?
+Você consegue fazer parcerias, entender o problema do seu cliente e
+resolver em tempo Usain Bolt? Que tal ser um Hustler e desenvolver suas
+habilidades com Customer Success, Inside Sales, Spin Selling e muito
+mais?
               </p>
             </div> <!-- / .skills__item -->
 
@@ -645,13 +682,13 @@
                     <li>
                       <i class="ion-android-pin"></i>
                       <p>
-                        <a href="www.facebook.com/transformeacarreira">Facebook | Transforme A Carreira</a>
+                        <a href="https://www.facebook.com/transformeacarreira">Facebook | Transforme A Carreira</a>
                       </p>
                     </li>
                     <li>
                       <i class="ion-android-call"></i>
                       <p>
-                        <a href="">Instagram | Transforme a Carreira</a>
+                        <a>Instagram | Transforme a Carreira</a>
                       </p>
                     </li>
                   </ul>
@@ -680,13 +717,9 @@
           <div class="col-sm-3">
 
             <ul class="footer__social">
+
               <li>
-                <a class="twitter" href="#">
-                  <i class="ion-social-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a class="facebook" href="#">
+                <a class="facebook" href="https://www.facebook.com/transformeacarreira">
                   <i class="ion-social-facebook"></i>
                 </a>
               </li>

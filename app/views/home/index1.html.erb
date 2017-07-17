@@ -1,2 +1,781 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Transforme a Carreira</title>
+    <link rel="shortcut icon" href="https://transformeacarreira.herokuapp.com/assets/iconsite-02.ico">
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="qMU1D0pgRnleREncr/EBmdYFlg+C6RrZpp9URc5faYclsr/v1pNStCfx5luv4BZAOUhFEKN93ZvQobbi46ttqg==">
+
+    <link rel="stylesheet" media="all" href="Transforme%20a%20Carreira_arquivos/bootstrap.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="Transforme%20a%20Carreira_arquivos/home.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="Transforme%20a%20Carreira_arquivos/theme.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="Transforme%20a%20Carreira_arquivos/application.css" data-turbolinks-track="reload">
+    <script src="Transforme%20a%20Carreira_arquivos/jquery_002.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/rails-ujs.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/turbolinks.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/bootstrap.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/grayscale.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/home.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/jquery.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/jquery_003.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/smoothscroll.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/theme.js" data-turbolinks-track="reload"></script>
+<script src="Transforme%20a%20Carreira_arquivos/application.js" data-turbolinks-track="reload"></script>
+    <link href="Transforme%20a%20Carreira_arquivos/css_002.css" rel="stylesheet" type="text/css">
+    <link href="Transforme%20a%20Carreira_arquivos/css.css" rel="stylesheet" type="text/css">
+    <link href="Transforme%20a%20Carreira_arquivos/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar_main" data-offset="80">
+    <!-- PRELOADER
+    ================================================== -->
+    <div class="preloader active" style="display: none;">
+      <img src="Transforme%20a%20Carreira_arquivos/spinner.svg" alt="Loading..." class="preloader__spinner">
+    </div>
+
+    <!-- MODAL
+    ================================================== -->
+    <div class="modal fade" id="modal_portfolio" tabindex="-1" role="dialog" aria-labelledby="modal_portfolio__heading">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title" id="modal_portfolio__heading"></h4>
+          </div>
+          <div class="modal-body">
+            <img id="modal_portfolio__img" class="img-responsive" src="" alt="...">
+            <p id="modal_portfolio__content"></p>
+            <div class="row">
+              <div class="col-xs-12">
+
+                <div class="contact__container">
+                  <div class="row">
+                    <div class="col-sm-8">
+
+                      <!-- Form -->
+                      <form class="contact__container__form" id="form_sendemail">
+
+                        <!-- Name -->
+                        <div class="form-group">
+                          <label for="name" class="sr-only">Nome *</label>
+                          <input name="name" class="form-control" id="name" placeholder="Insira seu Nome" type="text">
+                          <span class="help-block"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-grou-nl">
+                          <label for="email" class="sr-only">Email *</label>
+                          <input name="email" class="form-control" id="email" placeholder="Insira seu Email" type="email">
+                          <span class="help-block"></span>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="btn btn-primary">
+                          Ver resultado
+                        </button>
+
+                      </form>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 2
+    ================================================== -->
+
+    <div class="modal fade" id="modal_portfolio2" tabindex="-1" role="dialog" aria-labelledby="modal_portfolio__heading">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <h4 class="modal-title" id="modal_portfolio__heading"></h4>
+          </div>
+          <div class="modal-body">
+            <img id="modal_portfolio__img" class="img-responsive" src="" alt="...">
+            <p id="modal_portfolio__content"></p>
+            <div class="row">
+              <div class="col-xs-12">
+
+                <div class="contact__container">
+                  <div class="row">
+                    <div class="col-sm-8">
+
+                      <!-- Form -->
+                      <form class="contact__container__form" id="form_sendemail">
+
+                        <!-- Name -->
+                        <div class="form-group">
+                          <label for="name" class="sr-only">Nome *</label>
+                          <input name="name" class="form-control" id="name" placeholder="Insira seu Nome" type="text">
+                          <span class="help-block"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-grou-nl">
+                          <label for="email" class="sr-only">Email *</label>
+                          <input name="email" class="form-control" id="email" placeholder="Insira seu Email" type="email">
+                          <span class="help-block"></span>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="btn btn-primary">
+                          Ver resultado
+                        </button>
+
+                      </form>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR
+    ================================================== -->
+    <nav class="navbar navbar-fixed-top navbar-default">
+      <div class="container">
+
+        <!-- Brand name -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_main" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="Transforme%20a%20Carreira_arquivos/HomeSite.png" class="img-logo" alt="...">
+        </div>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbar_main">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="#section_banner">Home</a>
+            </li>
+            <li><a href="#section_features">Sobre Nós</a></li>
+            <li><a href="#section_pricing">Startup</a></li>
+            <li><a href="#section_stats">Newsletter</a></li>
+            <li><a href="#section_skills">Áreas</a></li>
+            <li><a>Blog</a></li>
+            <li><a href="#section_contact">Contato</a></li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <!-- BANNER
+    ================================================== -->
+    <section class="section_banner" id="section_banner">
+
+      <!-- Images -->
+      <div class="banner__carousel__img" data-images="assets/mulher.png, assets/img/2.jpg, assets/img/homem.png" style="position: absolute; z-index: 0; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;">
+      <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 855px; width: 1263px; z-index: -999998; position: absolute;"><img src="Transforme%20a%20Carreira_arquivos/homem.png" style="position: absolute; margin: 0px; padding: 0px; border: medium none; width: 1465.71px; height: 855px; max-height: none; max-width: none; z-index: -999999; left: -101.357px; top: 0px;"></div></div>
+
+
+      <!-- Carousel -->
+      <div id="banner__carousel" class="banner__carousel carousel" data-ride="carousel">
+
+        <!-- Slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+
+                  <h1 class="h0 page-header text-white text-center animate-down animate-xs-step-0">
+                    <span>Guia definitivo</span> para quem quer trabalhar em startups
+                  </h1>
+                  <p class="page-subheader text-white-muted text-center animate-down animate-xs-step-1">
+                    Faça download grátis do nosso ebook e dê seus primeiros passos no mundo das  startups :)
+                  </p>
+                  <div class="text-center">
+                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Baixe nosso Ebook!" data-img="assets/" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
+                    Baixe aqui
+                    </a>
+                  </div>
+
+                </div>
+              </div> <!-- / .row -->
+            </div> <!-- / .container -->
+
+          </div>
+          <div class="item">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+
+                  <h1 class="h0 page-header text-white text-center animate-down animate-xs-step-0">
+                    Bem vindo <span>À Transformação</span>
+                  </h1>
+                  <p class="page-subheader text-white-muted text-center animate-down animate-xs-step-1">
+                    Conheça nosso blog e saiba como você pode otimizar
+suas habilidades para se tornar o profissional que o mercado procura!
+                  </p>
+                  <div class="text-center">
+                    <a href="#section_features" class="btn btn-primary animate-down animate-xs-step-2">
+                      Descubra-se aqui!
+                    </a>
+
+                  </div>
+
+                </div>
+              </div> <!-- / .row -->
+            </div> <!-- / .container -->
+
+          </div>
+          <div class="item active">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+
+                  <h1 class="h0 page-header text-white text-center animate-down animate-xs-step-0">
+                    Faça nosso <span>quiz</span> agora mesmo
+                  </h1>
+                  <p class="page-subheader text-white-muted text-center animate-down animate-xs-step-1">
+                    Quiz combinado com perguntas estratégicas que irão te mostrar a área em que mais se encaixa ;)
+                  </p>
+                  <div class="text-center">
+                    <a href="#modal_portfolio" class="btn btn-primary" role="button" data-toggle="modal" data-heading="Quem é você em Game of Thrones?" data-img="assets/" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque maiores quibusdam, soluta nostrum odio dolore ratione numquam nemo accusamus quos, veniam alias fugit, nulla quaerat dicta. Aut nulla rerum natus?">
+                      Descubra-se aqui
+                    </a>
+                  </div>
+
+                </div>
+              </div> <!-- / .row -->
+            </div> <!-- / .container -->
+
+          </div>
+        </div>
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#banner__carousel" data-slide-to="0" class=""></li>
+          <li data-target="#banner__carousel" data-slide-to="1" class=""></li>
+          <li data-target="#banner__carousel" data-slide-to="2" class="active"></li>
+        </ol>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#banner__carousel" role="button" data-slide="prev">
+          <span class="ion-android-arrow-back" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#banner__carousel" role="button" data-slide="next">
+          <span class="ion-android-arrow-forward" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div> <!-- / .carousel -->
+
+    </section>
+
+    <!-- FEATURES
+    ================================================== -->
+    <section class="section_features" id="section_features">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <h2 class="page-header text-center">
+              <span>Por que</span> estamos aqui?
+            </h2>
+
+            <p class="page-subheader text-center">
+              Você precisa acompanhar as exigências do mercado de trabalho para não ficar para trás. Nosso objetivo é te guiar
+na direção correta, com tudo o que precisa saber para se tornar um
+profissional de alta performance para atuar nas áreas de design,
+marketing, programação e vendas.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-4">
+
+            <div class="features__item animate-sm-step-0" data-animate="animate-up">
+              <div class="features__item__icon">
+
+              </div>
+              <h3 class="features__item__heading">
+                Transforme
+              </h3>
+              <div class="features__item__body">
+                Está entrando no mercado de trabalho ou quer se tornar
+um profissional mais eficiente? Descubra mais sobre seu perfil
+profissional, conheça suas melhores habilidades e faça delas sua mais
+importante ferramenta de trabalho.
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="features__item animate-sm-step-1" data-animate="animate-up">
+              <div class="features__item__icon">
+
+              </div>
+              <h3 class="features__item__heading">
+                Inove
+              </h3>
+              <div class="features__item__body">
+                O conhecimento vai muito além de livros e teorias sobre o
+ mercado digital. Leia, estude, mas lembre-se também de vivenciar
+experiências que farão de você “o cara” que as melhores startups do
+Brasil e do mundo precisam.
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="features__item animate-sm-step-2" data-animate="animate-up">
+              <div class="features__item__icon">
+
+              </div>
+              <h3 class="features__item__heading">
+                Empreenda
+              </h3>
+              <div class="features__item__body">
+                As startups mudaram o sentido da palavra empreender.
+Mais criatividade e menos dinheiro são o mais comum no cenário do
+empreendedorismo. 1500 empresas brasileiras são startups, só em São Paulo, só no último ano, o setor movimentou em torno de 10 bilhões de reais. Você precisa ficar por dentro desse novo mundo!
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- PRICING
+    ================================================== -->
+    <section class="section_pricing" id="section_pricing">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <h2 class="page-header text-center">
+              Conheça as <span>principais startups</span> brasileiras e mundiais
+            </h2>
+
+            <p class="page-subheader text-center">
+              Apesar de o nome startup poder ser literalmente traduzido
+como algo que acaba de começar, nem toda nova empresa pode ser chamada
+assim. Isso porque o termo startup já ganhou uma definição mais atual.
+Segundo Yuri Gitahy, especialista em startups e fundador da conselheiro
+de empresas de tecnologia e fundador da Aceleradora, afirma que “uma
+startup é um grupo de pessoas à procura de um modelo de negócios
+repetível e escalável, trabalhando em condições de extrema incerteza”.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+
+         <div class="col-md-12">
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://www.meliuz.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/meliuz.png" alt="Meliuz"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://sambatech.com/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/sambatech.png" alt="Sambatech"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://evnts.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/evnts.png" alt="Evnts"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://www.plugcrm.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/plug.png" alt="Plug CRM"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://cargox.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/cargox.png" alt="Cargox"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://www.infoprice.co/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/infoprice.png" alt="infoprice"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://www.maxmilhas.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/maxmilhas.png" alt="Maxmilhas"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://www.sambaads.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/sambaads.png" alt="SambaAds"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://www.fcamara.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/fcamara.png" alt="Fcamara"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://stone.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/stone.png" alt="Stone"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://www.netshow.me/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/netshowme.png" alt="Netshow.me"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://cabify.com/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/cabify.png" alt="Cabify"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://tracksale.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/tracksale.png" alt="Tracksale"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://www.getninjas.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/getninjas.png" alt="GetNinjas"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://www.rockcontent.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/rockcontent.png" alt="RockContent"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="https://descomplica.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/descomplica.png" alt="Descomplica"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://appprova.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/appprova.png" alt="AppProva"></a></figure>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <div class="img-grayscale">
+            <figure><a href="http://vivareal.com.br/" target="_blank"><img class="img-responsive img-center " src="Transforme%20a%20Carreira_arquivos/vivareal.png" alt="Vivareal"></a></figure>
+          </div>
+        </div>
+      </div>
+
+
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- STATS
+    ================================================== -->
+    <section class="section_stats" id="section_stats">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <h2 class="page-header text-center">
+              Assine nossa <span>newsletter</span>!
+            </h2>
+
+            <p class="page-subheader  text-center">
+              Fique ligado no que há de mais atual sobre carreira,
+startups, capacitação e principais eventos da área pelo Brasil e no
+mundo.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-xs-12">
+
+            <div class="contact__container">
+              <div class="row">
+                <div class="col-sm-8">
+
+                  <!-- Form -->
+                <form class="contact__container__form" action="/contact" accept-charset="UTF-8" method="post"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="qMU1D0pgRnleREncr/EBmdYFlg+C6RrZpp9URc5faYclsr/v1pNStCfx5luv4BZAOUhFEKN93ZvQobbi46ttqg==" type="hidden">
+
+                    <!-- Name -->
+                    <div class="form-group">
+                      <label for="name" class="sr-only">Name *</label>
+                      <input class="form-control" placeholder="Insira seu Nome" name="contact_us[name]" id="contact_us_name" type="text">
+                      <span class="help-block"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-grou-nl">
+                      <label for="email" class="sr-only">Email address *</label>
+                      <input class="form-control" placeholder="Insira seu Email" name="contact_us[email]" id="contact_us_email" type="email">
+                      <span class="help-block"></span>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary">
+                      Assine
+                    </button>
+
+</form>
+                </div>
+              </div> <!-- / .row -->
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- SKILLS
+    ================================================== -->
+    <section class="section_skills" id="section_skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <h2 class="page-header text-center">
+              Principais <span>áreas</span> em uma startup
+            </h2>
+
+            <p class="page-subheader text-center">
+              Há vagas, muitas vagas nas startups, mas os pré-requisitos
+ não são bem uma graduação convencional. Conheça as áreas que funcionam
+como pilares nessas empresas:
+            </p>
+
+          </div>
+        </div>
+        <div class="row row_centered">
+          <div class="col-sm-12">
+
+            <div class="skills__item">
+              <h3 class="skills__item__heading">Hackers (Programação)<small>45%</small></h3>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;" data-animate="animate-progress">
+                </div>
+              </div> <!-- / progress -->
+              <p>
+                Você manja de códigos, criar sites, resolver bugs? As
+pessoas sempre lembram de você quando precisam formatar o computador?
+Então, você pode atuar como Hacker, aproveitando suas habilidades de
+Desenvolvimento Ágil, Scrum e diversas outras metodologias e
+ferramentas.
+              </p>
+            </div> <!-- / .skills__item -->
+
+            <div class="skills__item">
+              <h3 class="skills__item__heading">Hipsters (Design)<small>25%</small></h3>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;" data-animate="animate-progress">
+                </div>
+              </div> <!-- / .progress -->
+              <p>
+                Briefing, Branding, Design de Interação, Design
+Thinking, fazem parte do seu vocabulário? Já te disseram: “Meu sobrinho
+também faz isso pela metade do preço”? Se sim, você pode ser um Hipster
+em uma startup bem cool.
+              </p>
+            </div> <!-- / .skills__item -->
+
+            <div class="skills__item">
+              <h3 class="skills__item__heading">Hypers (Marketing)<small>20%</small></h3>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;" data-animate="animate-progress">
+                </div>
+              </div> <!-- / .progress -->
+              <p>
+                Instagram não é só um lugar para postar selfie, mas sua
+ferramenta de trabalho? Curte fazer testes, testes e mais um pouco de
+testes? Batalha a ferro e fogo para estar nos primeiros lugares do
+Google? Seu lugar é como Hyper!
+              </p>
+            </div> <!-- / .skills__item -->
+
+            <div class="skills__item">
+              <h3 class="skills__item__heading">Hustlers (Business/Vendas)<small>10%</small></h3>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;" data-animate="animate-progress">
+                </div>
+              </div> <!-- / .progress -->
+              <p>
+                Seu forte é a argumentação e não perde vendas jamais?
+Você consegue fazer parcerias, entender o problema do seu cliente e
+resolver em tempo Usain Bolt? Que tal ser um Hustler e desenvolver suas
+habilidades com Customer Success, Inside Sales, Spin Selling e muito
+mais?
+              </p>
+            </div> <!-- / .skills__item -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- CONTACT
+    ================================================== -->
+    <section class="section_contact" id="section_contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <h2 class="page-header text-center">
+              Fale com <span>a gente</span>
+            </h2>
+
+            <p class="page-subheader text-white-muted text-center">
+              Quer saber mais, propor parcerias ou fazer sugestões?
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-xs-12">
+
+            <div class="contact__container">
+              <div class="row">
+                <div class="col-sm-8">
+
+                  <!-- Form -->
+                  <form class="contact__container__form" action="/contact" accept-charset="UTF-8" method="post"><input name="utf8" value="✓" type="hidden"><input name="authenticity_token" value="qMU1D0pgRnleREncr/EBmdYFlg+C6RrZpp9URc5faYclsr/v1pNStCfx5luv4BZAOUhFEKN93ZvQobbi46ttqg==" type="hidden">
+
+                    <!-- Header -->
+                    <div class="form-group">
+                      <h3>Envie a sua mensagem</h3>
+                    </div>
+
+                    <!-- Alert message -->
+                    <div class="alert" id="form_message" role="alert"></div>
+
+                    <!-- Name -->
+                    <div class="form-group">
+                      <label for="name" class="sr-only">Nome *</label>
+                      <input class="form-control" placeholder="Entre com seu nome" name="contact_us[name]" id="contact_us_name" type="text">
+                      <span class="help-block"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                      <label for="email" class="sr-only">Email *</label>
+                      <input class="form-control" placeholder="Entre com seu email" name="contact_us[email]" id="contact_us_email" type="email">
+                      <!-- <input name="email" class="form-control" id="email" placeholder="Entre com seu email" type="email"> -->
+                      <span class="help-block"></span>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                      <label for="message" class="sr-only">Menssagem *</label>
+                      <textarea class="form-control" placeholder="Escreva sua mensagem" name="contact_us[messsage]" id="contact_us_messsage"></textarea>
+                      <!-- <textarea name="message" class="form-control" id="message" placeholder="Escreva sua mensagem a gente"></textarea> -->
+                      <span class="help-block"></span>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary">
+                      Enviar
+                    </button>
+
+</form>
+                </div>
+                <div class="col-sm-4">
+
+                  <ul class="contact__container__info">
+                    <li>
+                      <h3>Contatos</h3>
+                    </li>
+                    <li>
+                      <i class="ion-android-pin"></i>
+                      <p>
+                        <a href="https://www.facebook.com/transformeacarreira">Facebook | Transforme A Carreira</a>
+                      </p>
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div> <!-- / .row -->
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="section_footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9">
+
+            <p class="footer__copyright">
+              <span id="footer__year">2017</span> ©TransformeACarreira
+            </p>
+
+          </div>
+          <div class="col-sm-3">
+
+            <ul class="footer__social">
+
+              <li>
+                <a class="facebook" href="https://www.facebook.com/transformeacarreira">
+                  <i class="ion-social-facebook"></i>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+<!-- Script analytics -->
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-102678753-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</body></html>
